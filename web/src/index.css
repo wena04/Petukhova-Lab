@@ -1,0 +1,310 @@
+/* NYU Langone–aligned palette + mint accent (web-safe fallbacks; replace with licensed Sharp Grotesk / Benton Sans if provided) */
+:root {
+  --nyu-purple: #580f8b;
+  --nyu-deep-purple: #390063;
+  --nyu-electric-indigo: #8000ff;
+  --nyu-digital-purple: #b341ff;
+  --nyu-mint: #00dca5;
+  --nyu-black: #000000;
+  --nyu-white: #ffffff;
+  --nyu-gray-light: #e0e0de;
+  --nyu-gray-medium: #b3b5ba;
+  --nyu-gray-dark: #76787b;
+  --nyu-text: #53565a;
+
+  --font-head: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Source Sans 3', Arial, sans-serif;
+
+  --header-h: 4rem;
+  --content-max: 42rem;
+  --content-wide: 56rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--nyu-text);
+  background: var(--nyu-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--nyu-purple);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--nyu-deep-purple);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  color: var(--nyu-purple);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--nyu-mint);
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-top: 1.25rem;
+  color: var(--nyu-deep-purple);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--nyu-gray-light);
+  backdrop-filter: blur(8px);
+}
+
+.site-header__inner {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-brand:hover {
+  color: inherit;
+}
+
+.site-brand__title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--nyu-purple);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.site-brand__sub {
+  font-size: 0.78rem;
+  color: var(--nyu-gray-dark);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: center;
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nyu-text);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--nyu-purple);
+}
+
+.site-nav a.active {
+  color: var(--nyu-purple);
+  border-bottom-color: var(--nyu-mint);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero {
+  margin-bottom: 2.5rem;
+}
+
+.hero--dark {
+  margin: -2rem -1.25rem 2.5rem;
+  padding: 2.5rem 1.25rem;
+  background: linear-gradient(135deg, var(--nyu-deep-purple) 0%, var(--nyu-purple) 55%, #4a0a7a 100%);
+  color: var(--nyu-white);
+}
+
+.hero--dark h1 {
+  color: var(--nyu-white);
+}
+
+.hero--dark .hero__sub {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero__sub {
+  font-size: 0.95rem;
+  color: var(--nyu-gray-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.hero__lead {
+  font-size: 1.15rem;
+  max-width: var(--content-max);
+  color: inherit;
+  opacity: 0.95;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn--mint {
+  background: var(--nyu-mint);
+  color: var(--nyu-black);
+}
+
+.btn--mint:hover {
+  background: #00c795;
+  color: var(--nyu-black);
+}
+
+.btn--outline-light {
+  background: transparent;
+  color: var(--nyu-white);
+  border: 2px solid var(--nyu-mint);
+}
+
+.btn--outline-light:hover {
+  background: rgba(0, 220, 165, 0.15);
+  color: var(--nyu-white);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.muted {
+  color: var(--nyu-gray-dark);
+  font-size: 0.95rem;
+}
+
+.card {
+  background: var(--nyu-gray-light);
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--nyu-mint);
+  margin: 1.5rem 0;
+}
+
+.participate-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--nyu-gray-light);
+  border-bottom: 1px solid var(--nyu-gray-light);
+}
+
+.participate-toc a {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.section-anchor {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 1.5rem 1.25rem;
+  background: var(--nyu-black);
+  color: var(--nyu-gray-medium);
+  font-size: 0.85rem;
+}
+
+.site-footer__inner {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+}
+
+.site-footer a {
+  color: var(--nyu-mint);
+}
+
+.placeholder-block {
+  padding: 2rem;
+  text-align: center;
+  background: var(--nyu-gray-light);
+  border-radius: 8px;
+  color: var(--nyu-gray-dark);
+}
