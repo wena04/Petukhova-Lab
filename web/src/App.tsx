@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Contact } from './pages/Contact'
+import { HSResources } from './pages/HSResources'
 import { Home } from './pages/Home'
 import { Participate } from './pages/Participate'
 import { People } from './pages/People'
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="people" element={<People />} />
         <Route path="contact" element={<Contact />} />
         <Route path="participate" element={<Participate />} />
+        <Route path="hs-resources" element={<HSResources />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

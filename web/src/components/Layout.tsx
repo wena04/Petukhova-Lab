@@ -4,6 +4,7 @@ const nav = [
   { to: '/', label: 'Home' },
   { to: '/publications', label: 'Publications' },
   { to: '/people', label: 'People' },
+  { to: '/hs-resources', label: 'HS resources' },
   { to: '/contact', label: 'Contact Us' },
   { to: '/participate', label: 'Participate' },
 ]

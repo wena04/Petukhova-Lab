@@ -22,9 +22,10 @@ export function Home() {
       </section>
       <p>
         We work with participants, clinicians, and collaborators to advance genetic and
-        translational research. If you are living with HS and interested in our current
+        translational research.         If you are living with HS and interested in our current
         SkinDeep study, visit the <Link to="/participate">Participate</Link> page for
-        eligibility, what to expect, and how to enroll.
+        eligibility, what to expect, and how to enroll. For patient-focused background on HS
+        and community organizations, see <Link to="/hs-resources">HS resources</Link>.
       </p>
     </>
   )
